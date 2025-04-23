@@ -1,12 +1,12 @@
-# Projekt kółko i krzyżyk
+# TicTacToe project 
 
-<!-- TODO - Krótki opis -->
+<!-- TODO - Short description -->
 
-## Opis 
+## Description
 
-<!-- TODO - Długi opis -->
+<!-- TODO - Long description -->
 
-## Implementacja
+## Implementation 
 
-<!-- TODO - Szczegóły implementacyjne -->
+<!-- TODO - Implementation details -->
 
