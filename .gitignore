@@ -1,0 +1,138 @@
+# === Python Bytecode / Cache ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+.pytest_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+.mypy_cache/
+.cache
+.hypothesis/
+.coverage
+.coverage.*
+*.cover
+*.py,cover
+nosetests.xml
+coverage.xml
+htmlcov/
+
+# === C Extensions ===
+*.so
+cython_debug/
+
+# === Distribution / Packaging ===
+.Python
+*.egg-info/
+*.egg
+MANIFEST
+build/
+dist/
+downloads/
+develop-eggs/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+.installed.cfg
+*.manifest
+*.spec
+
+# === Environment / Virtualenv ===
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv*
+envdev*
+anenv
+.pdm-python
+.pdm.toml
+.pdm-build/
+__pypackages__/
+
+# === IDEs and Editors ===
+.vscode/
+.vs/
+.idea/
+.spyderproject
+.spyproject
+.ropeproject
+*.swp
+*~
+.DS_Store
+ipython_config.py
+profile_default/
+
+# === PyCharm Specific ===
+# .idea/ already included above
+
+# === Emacs/Vim Temporary Files ===
+# already included above
+
+# === Pygame Specific ===
+/Setup
+/src_py/version.py
+/prebuilt-x??
+/prebuilt_downloads
+_headers/*
+buildconfig/manylinux-build/wheelhouse/
+
+# === Cython Generated Files ===
+src_c/_sdl2/audio.c
+src_c/_sdl2/controller.c
+src_c/_sdl2/mixer.c
+src_c/_sdl2/sdl2.c
+src_c/_sdl2/video.c
+src_c/_sprite.c
+src_c/pypm.c
+
+# === Sphinx Documentation ===
+/docs/generated
+docs/_build/
+/site
+
+# === Testing / Coverage Tools ===
+.tox/
+.nox/
+
+# === Log / Misc Files ===
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+celerybeat-schedule
+celerybeat.pid
+
+# === Web Frameworks ===
+instance/
+.webassets-cache
+.scrapy
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints
+
+# === Build Tools ===
+.pybuilder/
+target/
+
+# === PyPI Configuration ===
+.pypirc
+
+# === SageMath ===
+*.sage.py
+
