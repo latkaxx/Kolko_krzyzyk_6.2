@@ -1,6 +1,6 @@
 # TicTacToe project 
 
-<!-- TODO - Short description -->
+A group project for subject 'Tools for Team Development' - ToTD - (in polish Narzędzia Pracy Grupowej (NPG)) on the Automation and Robotics course at AGH UST. It is an extended version of a classic TicTacToe game implemented in Python with PyGame. The rules are explained below
 
 ## Description
 
