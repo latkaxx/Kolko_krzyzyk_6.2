@@ -3,6 +3,7 @@
 import pygame
 
 def main():
+    print("Hello world")
     # TODO - Write the app
     pass
 
