@@ -15,9 +15,8 @@ fi
 
 # Create and activate virtual environment
 "$PYTHON" -m venv env
+
 source ./env/bin/activate
 
 # Install dependencies
 $PYTHON -m pip install -r requirements.txt
-
-source ./env/bin/activate

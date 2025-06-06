@@ -4,8 +4,7 @@ import os
 from enum import Enum
 from typing import Optional, List, Tuple, Union
 
-# Game constants
-WINDOW_SIZE = 800
+WINDOW_SIZE = 600
 BOARD_SIZE = 3
 CELL_SIZE = WINDOW_SIZE // (BOARD_SIZE * 3)  # Accounting for nested boards
 COLORS = {
@@ -112,7 +111,7 @@ class Board:
             
         # Check rows, columns, and diagonals
         for i in range(self.size):
-            # Check row
+            # Check rows
             if all(self.grid[i][j] and       self.grid[i][0] and isinstance(self.grid[i][j], Node) and 
                    self.grid[i][j].player == self.grid[i][0].player 
                    for j in range(self.size) if self.grid[i][j] is not None):
@@ -120,7 +119,7 @@ class Board:
                     self.winner = self.grid[i][0].player
                     return self.winner
             
-            # Check column
+            # Check columns
             if all(self.grid[j][i] and       self.grid[0][i] and isinstance(self.grid[j][i], Node) and 
                    self.grid[j][i].player == self.grid[0][i].player 
                    for j in range(self.size) if self.grid[j][i] is not None):
@@ -128,15 +127,16 @@ class Board:
                     self.winner = self.grid[0][i].player
                     return self.winner
         
-        # Check diagonals
-        if all(self.grid[i][i] and self.grid[0][0] and isinstance(self.grid[i][i], Node) and 
+        # Diagonal left top -> right bottom 
+        if all(self.grid[i][i] and       self.grid[0][0] and isinstance(self.grid[i][i], Node) and 
                self.grid[i][i].player == self.grid[0][0].player 
                for i in range(self.size) if self.grid[i][i] is not None):
             if all(self.grid[i][i] is not None for i in range(self.size)):
                 self.winner = self.grid[0][0].player
                 return self.winner
-                
-        if all(self.grid[i][self.size-1-i] and self.grid[0][self.size-1] and isinstance(self.grid[i][self.size-1-i], Node) and 
+
+        # Diagonal right top -> left bottom 
+        if all(self.grid[i][self.size-1-i] and       self.grid[0][self.size-1] and isinstance(self.grid[i][self.size-1-i], Node) and 
                self.grid[i][self.size-1-i].player == self.grid[0][self.size-1].player 
                for i in range(self.size) if self.grid[i][self.size-1-i] is not None):
             if all(self.grid[i][self.size-1-i] is not None for i in range(self.size)):
@@ -187,7 +187,7 @@ class Game:
     def __init__(self, player_count: int = 2):
         pygame.init()
         self.screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE + 100))
-        pygame.display.set_caption("Extended Tic-Tac-Toe")
+        pygame.display.set_caption("Mind-Bender Tic-Tac-Toe")
         self.clock = pygame.time.Clock()
         
         self.player_count = min(max(player_count, 2), 4)
@@ -414,6 +414,6 @@ class Game:
         sys.exit()
 
 if __name__ == "__main__":
-    # Create game with 2 players (can be changed to 2-4)
+    # Create game with 2 players, 4 can join at most (for bigger N)
     game = Game(player_count=2)
     game.run()
