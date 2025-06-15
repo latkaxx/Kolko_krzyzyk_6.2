@@ -4,7 +4,30 @@ A group project for subject 'Tools for Team Development' - ToTD - (in polish Nar
 
 ## Description
 
-<!-- TODO - Long description -->
+**Mind-Bender Tic-Tac-Toe** is a recursive, multi-layered twist on the classic tic-tac-toe game, developed using Python and Pygame. It introduces a deeply nested board structure, strategic depth, and support for up to 4 unique players, each represented by mathematical symbols.
+
+### Game concept
+
+Instead of playing on a single 3×3 grid, each cell of the main board contains another 3×3 board, and each of those may contain further sub-boards—creating a layered hierarchy. Players must win on the lowest-level boards to claim cells in higher-level ones, ultimately aiming to win the root board.
+
+The game supports up to **four players**, each identified with a symbol and color:
+
+Σ (Sigma) – Red
+I (Integral) – Blue
+α (Alpha) – Green
+β (Beta) – Yellow
+
+Turns rotate automatically, and players can resign mid-game. The interface is fully interactive using mouse clicks, with real-time visual feedback, board highlighting, and win detection. The game ends when the root board is won or when only one player remains.
+
+### How to play
+
+1. Run the game (lauching instructions below);
+2. Click on any deepest sub-board to make the first move;
+3. After each move, your opponent is directed to play in the sub-board that corresponds to the position of your last move: 
+*the location of a player’s move determines the sub-board the next player must play in: the row and column of the clicked cell correspond to the next active sub-board’s position within its parent board; if that target sub-board is already won or full, the next player can freely choose any other available deepest board*;
+4. Win a sub-board to claim it, and win the root board to win the game;
+5. Click **R** to restart, or click the red button at the bottom area to resign (both actions can be performed mid-game);
+6. **Have fun!**
 
 ## Setup of the environment
 
