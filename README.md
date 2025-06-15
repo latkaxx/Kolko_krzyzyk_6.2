@@ -35,7 +35,26 @@ cd ..\src
 python main.py
 ```
 
-<!-- TODO - Test on Windows -->
+The game has been successfully tested on **Windows 10 and 11** using both the `setup.bat` and `setup.ps1` scripts. If you encounter any issues, consider the following:
+
+-Make sure **Python is added to your system PATH**.
+
+-Use **PowerShell** or **Command Prompt** with administrative privileges if needed.
+
+-If script execution is blocked, enable it in PowerShell with:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+For a temporary bypass without changing global settings, you can alternatively run:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+-To run the game, navigate to the src directory and execute:
+```bat
+cd ..\src
+python main.py
+```
 
 ## Implementation 
 
