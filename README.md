@@ -81,5 +81,43 @@ python main.py
 
 ## Implementation 
 
+The project was implemented in Python and divided into several logical modules. The program code is organized into separate files, following the principle of responsibility for classes and functions. The whole project forms a simple version of the Tic tac toe game, with potential for future expansion with artificial intelligence. Project Structure main.py The main file that runs the program. It creates an instance of the Game class and calls the run() method, which initializes the main game loop and manages the overall gameplay.
+
+game.py Contains the Game class responsible for controlling the game logic. This class creates the game board (Board), handles alternating player moves, checks for endgame conditions (win or draw), and manages user interaction. The run() method serves as the main game loop.
+
+board.py Contains the Board class, which represents the current state of the game board. This class enables:
+
+adding pieces to columns,
+
+checking available moves,
+
+detecting a win,
+
+returning a visual representation of the board.
+
+node.py This file defines the Node class, which represents a single game state. It is mainly used for implementing artificial intelligence or decision-making algorithms (e.g., minimax). The class stores information about:
+
+the current state of the board,
+
+the active player,
+
+the heuristic value of the state,
+
+possible successors (children nodes).
+
+connect.py A helper module containing the core rules of Connect Four – checking for win conditions (four in a row) and other utility functions used for game logic or AI heuristics.
+
+How the Game Works The program starts from main.py, which initializes the Game object and begins the game.
+
+Players take turns making moves on the board, and the state is updated via the Board object.
+
+After each move, the game checks for a win or a draw.
+
+If artificial intelligence is used, the Node class and functions in connect.py allow building a tree of possible moves and evaluating game states.
+
+The game ends when a player wins or when the board is full, resulting in a draw.
+
+Summary The modular structure of the project ensures clarity and makes the code easy to maintain and expand. This design also facilitates the addition of features such as a graphical user interface, multiplayer mode, or more advanced AI in the future.
+
 <!-- TODO - Implementation details -->
 
